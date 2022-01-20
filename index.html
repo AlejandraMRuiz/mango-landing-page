@@ -92,9 +92,29 @@
 				><em>Find out more on Wikipedia</em></a
 			>
 
-			<button>👉 buy mangos!</button>
+			<button class="buyBtn">👉 buy mangos!</button>
 
-			<script></script>
+			<script>
+				let buyBtn = document.querySelector('.buyBtn');
+
+				function buyMangos() {
+					let name = prompt('What is your name?');
+					let email = prompt('What is your email?');
+					let maxSpend = prompt(
+						'What is the most you can spend on mangos today?'
+					);
+
+					if (maxSpend <= 2) {
+						alert('Sorry... You cannot buy any mangos today.');
+					} else {
+						alert(
+							"Yay! You qualify to buy mangos!! Stay tuned to your inbox - We'll email you soon!"
+						);
+					}
+				}
+
+				buyBtn.addEventListener('click', buyMangos);
+			</script>
 		</div>
 	</body>
 </html>
